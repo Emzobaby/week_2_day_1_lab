@@ -12,6 +12,7 @@ def book_info(book_title)
       return book
     end
   end
+  return "#{book_title} is not available at this library."
 end
 
 def get_rental_details(book_title)
