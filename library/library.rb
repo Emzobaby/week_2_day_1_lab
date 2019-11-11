@@ -21,6 +21,7 @@ def get_rental_details(book_title)
       return book[:rental_details]
     end
   end
+  return "#{book_title} not found."
 end
 
   def add_new_book(new_title)
