@@ -22,5 +22,14 @@ def get_rental_details(book_title)
   end
 end
 
+def add_new_book(new_title)
+  new_book = {}
+  new_book[:title] = new_title
+  new_book[:rental_details] = {
+    student_name: "",
+    date: ""
+  }
+  @books << new_book
+end
 
 end
