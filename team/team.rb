@@ -12,4 +12,10 @@ class Team
     @players << new_player_name
   end
 
+  def check_player_in_team(player_name)
+    for player in @players
+      return player_name == player
+    end
+  end
+
 end
