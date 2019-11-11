@@ -23,6 +23,11 @@ def test_get_coach
   assert_equal("Tony Fitzpatrick", st_mirren_fc.coach)
 end
 
+def test_add_new_player
+  st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick")
+  assert_equal(["Barry Lavety", "Kenny McDowall", "Campbell Money", "Lionel Messi"], st_mirren_fc.add_new_player("Lionel Messi"))
+end
+
 
 
 
