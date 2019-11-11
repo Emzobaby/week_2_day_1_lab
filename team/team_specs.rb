@@ -43,9 +43,23 @@ def test_get_points
   assert_equal(10, st_mirren_fc.points)
 end
 
+def test_update_points_win
+  st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick",)
+  st_mirren_fc.update_points("win")
+  assert_equal(3, st_mirren_fc.points)
+end
 
+def test_update_points_lose
+  st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick",)
+  st_mirren_fc.update_points("lose")
+  assert_equal(0, st_mirren_fc.points)
+end
 
-
+def test_update_points_draw
+  st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick",)
+  st_mirren_fc.update_points("draw")
+  assert_equal(0, st_mirren_fc.points)
+end
 
 
 end
