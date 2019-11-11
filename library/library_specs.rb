@@ -68,6 +68,16 @@ class TestLibrary < MiniTest::Test
       glasgow_library.book_info("the_handmaids_tale"))
   end
 
+  def test_get_rental_details
+    glasgow_library = Library.new(@@books)
+    assert_equal(
+      {
+       student_name: "Suzie",
+       date: "01/10/16"
+     },
+      glasgow_library.get_rental_details("the_handmaids_tale"))
+  end
+
 
 
 
