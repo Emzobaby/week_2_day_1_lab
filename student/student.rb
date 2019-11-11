@@ -13,5 +13,13 @@ class Student
     return @cohort
   end
 
+  def student_can_talk
+      return "What up my homies!"
+  end
+
+  def say_favourite_lang(favourite_lang)
+    return "I love #{favourite_lang}!"
+  end
+
 
 end
