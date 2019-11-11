@@ -113,4 +113,13 @@ class TestLibrary < MiniTest::Test
       ], glasgow_library.books)
   end
 
+  def test_change_rental_details
+    glasgow_library = Library.new(@@books)
+    glasgow_library.change_rental_details("50_shades_of_grey", "Paddy", "01/12/19")
+    assert_equal({
+     student_name: "Paddy",
+     date: "01/12/19"
+    }, glasgow_library.books[1][:rental_details])
+  end
+
 end

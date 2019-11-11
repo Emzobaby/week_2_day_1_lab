@@ -22,14 +22,26 @@ def get_rental_details(book_title)
   end
 end
 
-def add_new_book(new_title)
-  new_book = {}
-  new_book[:title] = new_title
-  new_book[:rental_details] = {
-    student_name: "",
-    date: ""
-  }
-  @books << new_book
-end
+  def add_new_book(new_title)
+    new_book = {}
+    new_book[:title] = new_title
+    new_book[:rental_details] = {
+      student_name: "",
+      date: ""
+    }
+    @books << new_book
+  end
+
+  def change_rental_details(title, student, date)
+    for book in @books
+      if book[:title] == title
+        book[:rental_details] = {
+          student_name: student,
+          date: date
+        }
+      end
+    end
+  end
+
 
 end
