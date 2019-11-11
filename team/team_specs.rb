@@ -25,7 +25,8 @@ end
 
 def test_add_new_player
   st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick")
-  assert_equal(["Barry Lavety", "Kenny McDowall", "Campbell Money", "Lionel Messi"], st_mirren_fc.add_new_player("Lionel Messi"))
+  st_mirren_fc.add_new_player("Lionel Messi")
+  assert_equal(["Barry Lavety", "Kenny McDowall", "Campbell Money", "Lionel Messi"], st_mirren_fc.players)
 end
 
 def test_check_player_in_team_yes
@@ -60,6 +61,5 @@ def test_update_points_draw
   st_mirren_fc.update_points("draw")
   assert_equal(0, st_mirren_fc.points)
 end
-
 
 end
