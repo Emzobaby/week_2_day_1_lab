@@ -38,6 +38,11 @@ def test_check_player_in_team_no
   assert_equal(false, st_mirren_fc.check_player_in_team("Cristiano Ronaldo"))
 end
 
+def test_get_points
+  st_mirren_fc = Team.new("St. Mirren", ["Barry Lavety", "Kenny McDowall", "Campbell Money"], "Tony Fitzpatrick", 10)
+  assert_equal(10, st_mirren_fc.points)
+end
+
 
 
 
